@@ -5,7 +5,7 @@ export class Negociacao {
     public readonly valor: number
   ) {}
 
-  get data(): Date {
+  public get data(): Date {
     return new Date(this._data.getTime());
   }
 
