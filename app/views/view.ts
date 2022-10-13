@@ -5,7 +5,7 @@ export abstract class View<T> {
     this.elemento = document.querySelector(seletor);
   }
 
-  abstract template(mensagem: T): string;
+  protected abstract template(mensagem: T): string;
 
   update(mensagem: T): void {
     const template = this.template(mensagem);
