@@ -43,6 +43,6 @@ export class NegociacaoController {
     }
 }
 __decorate([
-    logarTempoExecucao({ emSegundos: true }),
-    inspecionar
+    inspecionar,
+    logarTempoExecucao({ emSegundos: true })
 ], NegociacaoController.prototype, "adiciona", null);
