@@ -17,7 +17,6 @@ export abstract class View<T> {
 
   protected abstract template(mensagem: T): string;
 
-  @logarTempoExecucao()
   public update(model: T): void {
     let template = this.template(model);
 
