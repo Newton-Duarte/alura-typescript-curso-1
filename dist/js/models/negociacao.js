@@ -24,4 +24,9 @@ export class Negociacao {
         Valor: ${this.valor}
       `;
     }
+    ehIgual(negociacao) {
+        return this.data.getDate() === negociacao.data.getDate() &&
+            this.quantidade === negociacao.quantidade &&
+            this.valor === negociacao.valor;
+    }
 }
