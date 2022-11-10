@@ -1,12 +1,11 @@
-import { Imprimivel } from "../interfaces/imprimivel.js";
+import { Modelo } from "../interfaces/modelo.js";
 
-export class Negociacao implements Imprimivel {
+export class Negociacao implements Modelo<Negociacao> {
   constructor(
     private _data: Date, 
     public readonly quantidade: number, 
     public readonly valor: number
   ) {}
-
   public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {
     const exp = /-/g;
     const data = new Date(dataString.replace(exp, ','));
@@ -29,5 +28,11 @@ export class Negociacao implements Imprimivel {
         Quantidade: ${this.quantidade}
         Valor: ${this.valor}
       `;
+  }
+
+  public ehIgual(negociacao: Negociacao): boolean {
+    return this.data.getDate() === negociacao.data.getDate() && 
+      this.quantidade === negociacao.quantidade && 
+      this.valor === negociacao.valor;
   }
 }
