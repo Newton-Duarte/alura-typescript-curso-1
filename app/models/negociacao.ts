@@ -1,4 +1,4 @@
-import { Imprimivel } from "../utils/imprimivel.js";
+import { Imprimivel } from "../interfaces/imprimivel.js";
 
 export class Negociacao implements Imprimivel {
   constructor(
